@@ -1,0 +1,44 @@
+.section-4 {
+    height: 100vh;
+    align-items: center;
+    align-content: center;
+    background-color: #fff;
+}
+
+.section-4 article {
+    font-family: var(--paragraph-font);
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 3rem;
+    font-weight: 400;
+    padding: 0px 100px;
+}
+
+.section-4 article a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/*____________________________________________MEDIA QUERY______________________________________________*/
+@media screen and (max-width: 834px) {
+    .section-4 article {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-4 article {
+        padding: 0px 50px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-4 article {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-4 article {
+        font-size: 2rem;
+    }
+}

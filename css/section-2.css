@@ -1,0 +1,119 @@
+.section-2 {
+    width: 100%;
+    height: 200vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.s2-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 150px;
+    padding: 0 50px;
+    height: 100vh;
+}
+
+.s2-heading {
+    color: var(--light-grey);
+    font-family: var(--heading-font);
+    font-size: 4rem;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    position: relative;
+    margin: 0;
+}
+
+.s2-heading span {
+    overflow: hidden;
+    display: flex;
+}
+
+.active-heading-anm .me {
+    transition-delay: .2s;
+}
+
+.s2-heading span p {
+    margin: 0;
+    transform: translateY(200%);
+    overflow: hidden;
+}
+
+.active-heading-anm span p {
+    transform: translateY(0%);
+    transition: transform .4s ease-in-out;
+}
+
+.s2-heading-border {
+    position: absolute;
+    left: -20px;
+    top: 0;
+    width: 4px;
+    height: 150px;
+    background-color: var(--secondary-color);
+}
+
+.s2-scrolling-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding-top: 50vh;
+    gap: 50vh;
+    will-change: transform;
+}
+
+.s2-scrolling-text article h2 {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    font-family: var(--heading-font);
+    margin: 0;
+}
+
+.s2-scrolling-text p {
+    font-family: var(--paragraph-font);
+    color: #ffff;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/*_________________________________________MEDIA QUERY______________________________________________________*/
+
+@media screen and (max-width: 834px) {
+    .s2-content {
+        gap: 100px;
+    }
+    .s2-heading {
+        font-size: 3rem;
+    }
+    .s2-scrolling-text p {
+        font-size: 1rem;
+    }
+    .s2-scrolling-text {
+        padding-top: 20vh;
+    }
+    .s2-scrolling-text article h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-2 {
+        height: max-content;
+    }
+    .s2-content {
+        height: max-content;
+        flex-direction: column;
+        gap: 150px;
+    }
+    .s2-scrolling-text {
+        gap: 300px;
+        padding-top: 0;
+    }
+    .s2-heading {
+        font-size: 4rem;
+    }
+    .s2-heading-border {
+        top: 50%;
+    }
+}

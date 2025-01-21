@@ -1,0 +1,67 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  background-color: rgba(0,0,0,0.8); 
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.flame-container {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; 
+  pointer-events: none;
+  overflow: hidden; 
+  position: fixed;
+}
+
+.flame {
+  position: absolute;
+  bottom: 0;
+  width: 5px;
+  height: 5px;
+  background: radial-gradient(circle, rgba(255,165,0,1) 0%, rgba(255,69,0,0.7) 70%, rgba(255,69,0,0) 100%);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatFlame 5s linear infinite, flicker 0.5s infinite alternate;
+}
+
+
+@keyframes floatFlame {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh) scale(0.8); 
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;       
+  background-color: var(--secondary-color); 
+  width: 0%;         
+  z-index: 100;      
+}
+
+@media screen and (max-width: 768px) {
+  .progress-bar {
+    display: none;
+  }
+}
